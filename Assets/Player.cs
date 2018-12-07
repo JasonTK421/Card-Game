@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
 
     private void OnMouseOverCard(Card card)
     {
-        print("Mouse over card: " + name);
+        print("Mouse over card: " + card.name);
         if (Input.GetMouseButtonDown(1))
         {
             //print("You picked up " + card.name + ".");
