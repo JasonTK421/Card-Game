@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb48d5cf25893a540a3873ca3645de34, type: 3}
+  m_Name: Leather Legs
+  m_EditorClassIdentifier: 
+  cardName: Leather Legs
+  image: {fileID: 21300000, guid: cb00cac75fcd5e2439934fab3be86f2e, type: 3}
+  description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type
+    specimen book.
+  uniqueAbility: Hero Atribute
+  armorClass: 6
+  maxAttack: 0
+  maxDefence: 12
