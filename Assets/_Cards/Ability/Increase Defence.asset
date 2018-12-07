@@ -11,8 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad81e190fe6889f48be953d3cd62b6b6, type: 3}
   m_Name: Increase Defence
   m_EditorClassIdentifier: 
-  cardType: 2
-  cardName: Shield
+  cardName: x2 Defence
   image: {fileID: 21300000, guid: 756a15505c1c2d94dbc271a3bd6f157e, type: 3}
   description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
