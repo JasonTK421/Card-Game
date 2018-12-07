@@ -9,7 +9,7 @@ public abstract class CardConfig : ScriptableObject {
     [Header("Card General")]
     [SerializeField] string cardName;
     [SerializeField] Sprite image;
-    [SerializeField] string description;
+    [SerializeField] string description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
     [SerializeField] string uniqueAbility;
 
     protected CardBehavior behavior;
