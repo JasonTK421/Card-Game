@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb48d5cf25893a540a3873ca3645de34, type: 3}
-  m_Name: Leather Chest
+  m_Name: Leather Arms
   m_EditorClassIdentifier: 
-  cardName: Leather Chest Plate
-  image: {fileID: 21300000, guid: 3f16270dbba48e6498b2ba7a4435d257, type: 3}
+  cardName: Leather Arms
+  image: {fileID: 21300000, guid: 9f820fe1fc7631f43bd3b65bd1e2c1bf, type: 3}
   description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
     when an unknown printer took a galley of type and scrambled it to make a type
     specimen book.
   uniqueAbility: Hero Attribute
-  armorClass: 2
-  maxAttack: 1
-  maxDefence: 12
+  armorClass: 1
+  maxAttack: 7
+  maxDefence: 6
