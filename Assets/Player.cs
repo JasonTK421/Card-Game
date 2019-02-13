@@ -18,12 +18,23 @@ public class Player : MonoBehaviour
     {
         if (currentCard)
         {
-            Vector3 cardPos = currentCard.transform.position;
-            cardPos.x = GetMouseXAndZ().x;
-            cardPos.y = 0.1f; // TODO get rid of magic number
-            cardPos.z = GetMouseXAndZ().y;
-            currentCard.transform.position = cardPos;
+            SetCardToMousePosition();
+            if (Input.GetMouseButtonUp(0))
+            {
+                currentCard.transform.position = currentCard.GetHomeLocation();
+                Cursor.visible = true;
+                currentCard = null;
+            }
         }
+    }
+
+    private void SetCardToMousePosition()
+    {
+        Vector3 cardPos = currentCard.transform.position;
+        cardPos.x = GetMouseXAndZ().x;
+        cardPos.y = 0.5f; // TODO get rid of magic number
+        cardPos.z = GetMouseXAndZ().y;
+        currentCard.transform.position = cardPos;
     }
 
     private void RegisterForMouseEvents()
@@ -49,6 +60,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Grabed: " + card.name);
             currentCard = card;
+            Cursor.visible = false;
         }
     }
 
@@ -56,8 +68,8 @@ public class Player : MonoBehaviour
     {
         Vector2 XZpoints;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        XZpoints.x = ray.GetPoint(1).x;
-        XZpoints.y = ray.GetPoint(1).z;
+        XZpoints.x = ray.GetPoint(9.5f).x;
+        XZpoints.y = ray.GetPoint(9.5f).z;
 
         return XZpoints;
     }
