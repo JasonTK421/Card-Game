@@ -604,6 +604,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 53f440e51bdd8fd4cbd07b15e6b1c421,
         type: 2}
+    - target: {fileID: 114025629663486422, guid: 8a80b9f692a2e1f4b950200b439a2ed5,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a80b9f692a2e1f4b950200b439a2ed5, type: 3}
 --- !u!1 &311618586
@@ -1145,7 +1150,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.1, y: -0.1}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &744441284
 MonoBehaviour:
@@ -1328,7 +1333,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e3dfc191fe0e3904ca7735a43ec21775,
         type: 2}
-    m_RemovedComponents: []
+    - target: {fileID: 1504796053810334, guid: 8a80b9f692a2e1f4b950200b439a2ed5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1284219974136990017, guid: 8a80b9f692a2e1f4b950200b439a2ed5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8a80b9f692a2e1f4b950200b439a2ed5, type: 3}
 --- !u!1 &855506988
 GameObject:
@@ -1666,6 +1676,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 3f95ec76ef633fe4da9d3393b8acd3a1,
         type: 2}
+    - target: {fileID: 114025629663486422, guid: 8a80b9f692a2e1f4b950200b439a2ed5,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a80b9f692a2e1f4b950200b439a2ed5, type: 3}
 --- !u!1 &1041900998
@@ -1999,6 +2014,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f425d1946c955774e92d477cabf76226,
         type: 2}
+    - target: {fileID: 114025629663486422, guid: 8a80b9f692a2e1f4b950200b439a2ed5,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a80b9f692a2e1f4b950200b439a2ed5, type: 3}
 --- !u!1001 &1452001018
@@ -2389,7 +2409,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 534669904}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

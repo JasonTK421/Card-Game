@@ -52,7 +52,7 @@ public class CameraRaycaster : MonoBehaviour // TODO maybe Rename Cursor
     {
         RaycastHit hitInfo;
         Physics.Raycast(ray, out hitInfo, maxRaycastDepth);
-        print("hitInfo: " + hitInfo);
+        // Debug.Log("hitInfo: " + hitInfo);
         var gameObjectHit = hitInfo.collider.gameObject;
         var cardHit = gameObjectHit.GetComponent<Card>();
         if (cardHit)
