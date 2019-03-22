@@ -24,11 +24,18 @@ public class Player : MonoBehaviour
             SetCardToMousePosition();
             if (Input.GetMouseButtonUp(0))
             {
-                currentCard.transform.position = currentCard.GetHomeLocation();
+                StopAllCoroutines();
+                StartCoroutine(MoveOverTime(currentCard, currentCard.GetHomeLocation(), cardSpeed));
                 Cursor.visible = true;
                 currentCard = null;
             }
         }
+    }
+
+    private void RegisterForMouseEvents()
+    {
+        var cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
+        cameraRaycaster.onMouseOverCard += OnMouseOverCard;
     }
 
     private void SetCardToMousePosition()
@@ -40,12 +47,6 @@ public class Player : MonoBehaviour
         currentCard.transform.position = cardPos;
     }
 
-    private void RegisterForMouseEvents()
-    {
-        var cameraRaycaster = Camera.main.GetComponent<CameraRaycaster>();
-        cameraRaycaster.onMouseOverCard += OnMouseOverCard;
-    }
-
     private void OnMouseOverCard(Card card)
     {
         // Debug.Log("Mouse over card: " + card.name);
@@ -55,29 +56,32 @@ public class Player : MonoBehaviour
             if (card.transform.position == card.GetHomeLocation() && viewSlot.IsOccupied() == false)
             {
                 viewSlot.SetCurrentCard(card);
-                StartCoroutine(MoveCardAndOpenViewCanvas());
+                StartCoroutine(MoveCard(viewSlot.transform.position));
+                viewCanvas.gameObject.SetActive(true);
             }
             else { return; }
         }
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Grabed: " + card.name);
             currentCard = card;
             Cursor.visible = false;
         }
     }
 
-    public IEnumerator MoveCardAndOpenViewCanvas()
+    public IEnumerator MoveCard(Vector3 target)
     {
-        
-        StartCoroutine(MoveOverTime(viewSlot.GetCurrentCard(), viewSlot.transform.position, cardSpeed));
+        StopAllCoroutines();
+        StartCoroutine(MoveOverTime(viewSlot.GetCurrentCard(), target, cardSpeed));
         yield return new WaitForSeconds(cardSpeed);
-        viewCanvas.gameObject.SetActive(true);
     }
 
-    public void CloseViewWindowAndReturnCard()
+    public void CloseViewWindow()
     {
         viewCanvas.gameObject.SetActive(false);
+    }
+
+    public void ReturnCard()
+    {
         StopAllCoroutines();
         StartCoroutine(MoveOverTime(viewSlot.GetCurrentCard(), viewSlot.GetCurrentCard().GetHomeLocation(), cardSpeed));
         viewSlot.ClearCurrentCard();
