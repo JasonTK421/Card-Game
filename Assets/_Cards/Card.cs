@@ -22,8 +22,9 @@ public class Card : MonoBehaviour {
     GameObject target;
 
     public void SetCardConfig(CardConfig cardconfig) { cardConfig = cardconfig; }
+    public CardType GetCardType() { return cardConfig.GetCardType(); }
 
-    private void Start()
+    void Start()
     {
         if (cardConfig != null)
         {
