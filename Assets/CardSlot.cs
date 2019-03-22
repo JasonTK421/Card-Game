@@ -18,5 +18,3 @@ public class CardSlot : MonoBehaviour
     public CardType GetCardType() { return cardType; }
 
 }
-
-public enum CardType { HERO, GEAR, UTILITY, ABILITY, VIEW }

@@ -33,3 +33,5 @@ public abstract class CardConfig : ScriptableObject {
     public Sprite GetSprite() { return image; }
     public string GetDescription () { return description; }
 }
+
+public enum CardType { HERO, GEAR, UTILITY, ABILITY, VIEW }
