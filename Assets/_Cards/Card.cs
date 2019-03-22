@@ -21,6 +21,7 @@ public class Card : MonoBehaviour {
     Vector3 homeLocation;
     GameObject target;
 
+    public void SetCardConfig(CardConfig cardconfig) { cardConfig = cardconfig; }
 
     private void Start()
     {

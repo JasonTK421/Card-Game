@@ -23,7 +23,7 @@ public class AbilityBehavior : CardBehavior {
         string abilityToDisplay = (cardConfig as AbilityConfig).GetUniqueAbility();
         gameObject.GetComponent<Card>().uniqueAbilityText.text = abilityToDisplay;
 
-        string typeToDisplay = (cardConfig as AbilityConfig).GetCardType();
-        gameObject.GetComponent<Card>().typeText.text = typeToDisplay;
+        CardType typeToDisplay = (cardConfig as AbilityConfig).GetCardType();
+        gameObject.GetComponent<Card>().typeText.text = typeToDisplay.ToString();
     }
 }

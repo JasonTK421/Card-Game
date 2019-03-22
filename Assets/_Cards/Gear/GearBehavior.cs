@@ -23,8 +23,8 @@ public class GearBehavior : CardBehavior {
         string abilityToDisplay = (cardConfig as GearConfig).GetUniqueAbility();
         gameObject.GetComponent<Card>().uniqueAbilityText.text = abilityToDisplay;
 
-        string typeToDisplay = (cardConfig as GearConfig).GetCardType();
-        gameObject.GetComponent<Card>().typeText.text = typeToDisplay;
+        CardType typeToDisplay = (cardConfig as GearConfig).GetCardType();
+        gameObject.GetComponent<Card>().typeText.text = typeToDisplay.ToString();
 
         string classToDisplay = (cardConfig as GearConfig).GetArmorClass();
         gameObject.GetComponent<Card>().classText.text = classToDisplay;

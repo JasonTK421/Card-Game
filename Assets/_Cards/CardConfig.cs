@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public abstract class CardConfig : ScriptableObject {
 
     [Header("Card General")]
+    [SerializeField] CardType cardType;
     [SerializeField] string cardName;
     [SerializeField] Sprite image;
     [SerializeField] string description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
-    [SerializeField] string uniqueAbility;
 
     protected CardBehavior behavior;
 
@@ -28,8 +28,8 @@ public abstract class CardConfig : ScriptableObject {
         behavior.DisplayInfo(gameObject);
     }
 
+    public CardType GetCardType() { return cardType; }
     public string GetCardName() { return cardName; }
     public Sprite GetSprite() { return image; }
     public string GetDescription () { return description; }
-    public string GetUniqueAbility () { return uniqueAbility; }
 }

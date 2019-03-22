@@ -23,8 +23,8 @@ public class HeroBehavior : CardBehavior {
         string abilityToDisplay = (cardConfig as HeroConfig).GetUniqueAbility();
         gameObject.GetComponent<Card>().uniqueAbilityText.text = abilityToDisplay;
 
-        string typeToDisplay = (cardConfig as HeroConfig).GetCardType();
-        gameObject.GetComponent<Card>().typeText.text = typeToDisplay;
+        CardType typeToDisplay = (cardConfig as HeroConfig).GetCardType();
+        gameObject.GetComponent<Card>().typeText.text = typeToDisplay.ToString();
 
         string classToDisplay = (cardConfig as HeroConfig).GetHeroClass();
         gameObject.GetComponent<Card>().classText.text = classToDisplay;
