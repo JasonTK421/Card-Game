@@ -878,6 +878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 402540826}
   - component: {fileID: 402540825}
+  - component: {fileID: 402540827}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -914,6 +915,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &402540827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402540824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e457d93c7389a240bb26c2b7a0a6dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardConfigs:
+  - {fileID: 11400000, guid: e3dfc191fe0e3904ca7735a43ec21775, type: 2}
+  - {fileID: 11400000, guid: 3a21b41542c111140acfdf71951f5e97, type: 2}
+  card: {fileID: 114237722905968826, guid: 8a80b9f692a2e1f4b950200b439a2ed5, type: 3}
 --- !u!4 &420217953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5417747061726737495, guid: 259fc8d38bb76ca4c89aa4668ce5f891,
@@ -3048,7 +3065,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 402540825}
-        m_MethodName: CloseViewWindow
+        m_MethodName: CloseViewCanvas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(cardSpeed);
     }
 
-    public void CloseViewWindow()
+    public void CloseViewCanvas()
     {
         viewCanvas.gameObject.SetActive(false);
     }
