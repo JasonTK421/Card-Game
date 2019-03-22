@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    ViewSlot viewSlot;
+    [SerializeField] Canvas viewCanvas;
+    [SerializeField] CardSlot viewSlot;
+    [Range(0.05f,1f)]
+    [SerializeField] float cardSpeed = 1;
+
     Card currentCard;
     
     void Start()
     {
-        viewSlot = FindObjectOfType<ViewSlot>();
         RegisterForMouseEvents();
     }
 
@@ -49,10 +52,10 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             //print("You picked up " + card.name + ".");
-            if (card.transform.position == card.GetHomeLocation() && viewSlot.GetIsOccupied() == false)
+            if (card.transform.position == card.GetHomeLocation() && viewSlot.IsOccupied() == false)
             {
                 viewSlot.SetCurrentCard(card);
-                StartCoroutine(viewSlot.OpenViewCanvasAndMoveCard());
+                StartCoroutine(MoveCardAndOpenViewCanvas());
             }
             else { return; }
         }
@@ -62,6 +65,35 @@ public class Player : MonoBehaviour
             currentCard = card;
             Cursor.visible = false;
         }
+    }
+
+    public IEnumerator MoveCardAndOpenViewCanvas()
+    {
+        
+        StartCoroutine(MoveOverTime(viewSlot.GetCurrentCard(), viewSlot.transform.position, cardSpeed));
+        yield return new WaitForSeconds(cardSpeed);
+        viewCanvas.gameObject.SetActive(true);
+    }
+
+    public void CloseViewWindowAndReturnCard()
+    {
+        viewCanvas.gameObject.SetActive(false);
+        StopAllCoroutines();
+        StartCoroutine(MoveOverTime(viewSlot.GetCurrentCard(), viewSlot.GetCurrentCard().GetHomeLocation(), cardSpeed));
+        viewSlot.ClearCurrentCard();
+    }
+
+    public IEnumerator MoveOverTime(Card cardToMove, Vector3 end, float seconds)
+    {
+        float elapsedTime = 0;
+        Vector3 startingPos = cardToMove.transform.position;
+        while (elapsedTime < seconds)
+        {
+            cardToMove.transform.position = Vector3.Lerp(startingPos, end, (elapsedTime / seconds));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        cardToMove.transform.position = end;
     }
 
     Vector2 GetMouseXAndZ()
