@@ -9,8 +9,14 @@ public class Player : MonoBehaviour
     [SerializeField] CardSlot viewSlot;
     [Range(0.05f,1f)]
     [SerializeField] float cardSpeed = 1;
+    [SerializeField] Card[] deckOfCards;
 
     Card currentCard;
+
+    public Card[] GetDeckOfCards()
+    {
+        return deckOfCards;
+    }
     
     void Start()
     {
