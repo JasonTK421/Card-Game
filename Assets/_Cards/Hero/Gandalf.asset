@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c5f6ed791486842bad230e90288de4, type: 3}
   m_Name: Gandalf
   m_EditorClassIdentifier: 
-  cardType: 0
+  cardClass: 0
+  cardType: 12
   cardName: Gandalf
   image: {fileID: 21300000, guid: 34843f9acd23ba844970d9a8ed8104d2, type: 3}
   description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.

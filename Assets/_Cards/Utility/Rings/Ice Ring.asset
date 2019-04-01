@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1b8175b7d376640ba89b08b0379060, type: 3}
   m_Name: Ice Ring
   m_EditorClassIdentifier: 
+  cardClass: 2
+  cardType: 8
   cardName: Ice Ring
   image: {fileID: 21300000, guid: 7d8a978b3078ca748b2b6500e91a07d9, type: 3}
   description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -19,4 +21,3 @@ MonoBehaviour:
     when an unknown printer took a galley of type and scrambled it to make a type
     specimen book.
   uniqueAbility: Ice Power
-  utilityClass: 0

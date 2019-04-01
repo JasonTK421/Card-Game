@@ -5,10 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = ("Card Game/Utility Card"))]
 public class UtilityConfig : CardConfig {
 
-    enum UtilityClass { Ring, Amulet, Potion};
-    
     [Header("Gear Spacific")]
-    [SerializeField] UtilityClass utilityClass;
     [SerializeField] string uniqueAbility;  //TODO Change name to unique name
 
     public override CardBehavior GetBehaviorComponent(GameObject objectToAttachTo)
@@ -16,6 +13,5 @@ public class UtilityConfig : CardConfig {
         return objectToAttachTo.AddComponent<UtilityBehavior>();
     }
 
-    public string GetUtilityClass() { return utilityClass.ToString(); }
     public string GetUniqueAbility() { return uniqueAbility; }
 }

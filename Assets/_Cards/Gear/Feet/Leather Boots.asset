@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb48d5cf25893a540a3873ca3645de34, type: 3}
   m_Name: Leather Boots
   m_EditorClassIdentifier: 
-  cardType: 1
+  cardClass: 1
+  cardType: 7
   cardName: Leather Boots
   image: {fileID: 21300000, guid: a84615b9032b41b4a86c6d11e9ee8ce9, type: 3}
   description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
     when an unknown printer took a galley of type and scrambled it to make a type
     specimen book.
-  armorClass: 7
   maxAttack: 13
   maxDefence: 5
   uniqueAbility: Hero Attribute

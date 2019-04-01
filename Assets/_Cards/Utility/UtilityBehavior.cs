@@ -23,10 +23,10 @@ public class UtilityBehavior : CardBehavior {
         string abilityToDisplay = (cardConfig as UtilityConfig).GetUniqueAbility();
         gameObject.GetComponent<Card>().uniqueAbilityText.text = abilityToDisplay;
 
-        CardType typeToDisplay = (cardConfig as UtilityConfig).GetCardType();
+        CardClass typeToDisplay = (cardConfig as UtilityConfig).GetCardClass();
         gameObject.GetComponent<Card>().typeText.text = typeToDisplay.ToString();
 
-        string classToDisplay = (cardConfig as UtilityConfig).GetUtilityClass();
+        string classToDisplay = (cardConfig as UtilityConfig).GetCardType().ToString();
         gameObject.GetComponent<Card>().classText.text = classToDisplay;
     }
 }

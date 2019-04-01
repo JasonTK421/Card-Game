@@ -22,6 +22,7 @@ public class Card : MonoBehaviour {
     GameObject target;
 
     public void SetCardConfig(CardConfig cardconfig) { cardConfig = cardconfig; }
+    public void SetHomeLocation(Vector3 location) { homeLocation = location;  }
     public CardType GetCardType() { return cardConfig.GetCardType(); }
 
     void Start()

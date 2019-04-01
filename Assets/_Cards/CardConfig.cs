@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public abstract class CardConfig : ScriptableObject {
 
     [Header("Card General")]
+    [SerializeField] CardClass cardClass;
     [SerializeField] CardType cardType;
     [SerializeField] string cardName;
     [SerializeField] Sprite image;
@@ -28,10 +29,12 @@ public abstract class CardConfig : ScriptableObject {
         behavior.DisplayInfo(gameObject);
     }
 
+    public CardClass GetCardClass() { return cardClass; }
     public CardType GetCardType() { return cardType; }
     public string GetCardName() { return cardName; }
     public Sprite GetSprite() { return image; }
     public string GetDescription () { return description; }
 }
 
-public enum CardType { HERO, GEAR, UTILITY, ABILITY, VIEW }
+public enum CardClass { HERO, GEAR, UTILITY, ABILITY, VIEW }
+public enum CardType { HEAD, ARMS, CHEST, HANDS, WEAPON1, WEAPON2, LEGS, FEET, RING, AMULET, POTION, ABILITY, HERO, VIEW };

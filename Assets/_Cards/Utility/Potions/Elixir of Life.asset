@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1b8175b7d376640ba89b08b0379060, type: 3}
   m_Name: Elixir of Life
   m_EditorClassIdentifier: 
+  cardClass: 2
+  cardType: 10
   cardName: Elixir of Life
   image: {fileID: 21300000, guid: ab0ec812b4eb1744697b03f302d6e9c6, type: 3}
   description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -19,4 +21,3 @@ MonoBehaviour:
     when an unknown printer took a galley of type and scrambled it to make a type
     specimen book.
   uniqueAbility: Heals HP
-  utilityClass: 2
