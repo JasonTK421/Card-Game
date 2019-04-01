@@ -15,7 +15,7 @@ public class CardSlot : MonoBehaviour
     public Card GetCurrentCard() { return currentCard; }
     public CardType GetCardType() { return cardType; }
     public void SetCurrentCard(Card card) { currentCard = card; isOccupied = true; }
-    public void ClearCurrentCard() { currentCard = null; }
+    public void ClearCurrentCard() { currentCard = null; isOccupied = false; }
 
 
 }
