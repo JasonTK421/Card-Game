@@ -8,7 +8,6 @@ public class InitializeBoard : MonoBehaviour
     Card[] playerDeck;
     CardSlot[] cardSlots;
     
-    // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<Player>();
