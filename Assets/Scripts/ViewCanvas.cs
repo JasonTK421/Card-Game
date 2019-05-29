@@ -13,4 +13,10 @@ public class ViewCanvas : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void CloseViewCanvas()
+    {
+        gameObject.SetActive(false);
+    }
+
 }

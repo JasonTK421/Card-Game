@@ -12,21 +12,21 @@ public class UtilityBehavior : CardBehavior {
     public override void DisplayInfo(GameObject gameObject)
     {
         string nameToDisplay = (cardConfig as UtilityConfig).GetCardName();
-        gameObject.GetComponent<Card>().nameText.text = nameToDisplay;
+        gameObject.GetComponent<Card>().displayName.text = nameToDisplay;
 
         Sprite imageToDisplay = (cardConfig as UtilityConfig).GetSprite();
-        gameObject.GetComponent<Card>().image.sprite = imageToDisplay;
+        gameObject.GetComponent<Card>().displaImage.sprite = imageToDisplay;
 
         string descriptionToDisplay = (cardConfig as UtilityConfig).GetDescription();
-        gameObject.GetComponent<Card>().descriptionText.text = descriptionToDisplay;
+        gameObject.GetComponent<Card>().displayDescription.text = descriptionToDisplay;
 
         string abilityToDisplay = (cardConfig as UtilityConfig).GetUniqueAbility();
-        gameObject.GetComponent<Card>().uniqueAbilityText.text = abilityToDisplay;
+        gameObject.GetComponent<Card>().displayAbillity.text = abilityToDisplay;
 
         CardClass typeToDisplay = (cardConfig as UtilityConfig).GetCardClass();
-        gameObject.GetComponent<Card>().typeText.text = typeToDisplay.ToString();
+        gameObject.GetComponent<Card>().displayType.text = typeToDisplay.ToString();
 
         string classToDisplay = (cardConfig as UtilityConfig).GetCardType().ToString();
-        gameObject.GetComponent<Card>().classText.text = classToDisplay;
+        gameObject.GetComponent<Card>().displayClass.text = classToDisplay;
     }
 }
